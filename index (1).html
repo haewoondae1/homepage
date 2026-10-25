@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>해운대수학학원 | 좌동, 중동, 우동 초2~고3 수학</title>
+<meta name="description" content="해운대구 좌동, 중동, 우동 초2부터 고3까지 다니는 수학학원. 우리 학교 시험 범위로 보는 무료 진단 테스트, 성장 기록, 월별 학습 진행표, 단원평가 피드백.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="해운대수학학원">
+<meta property="og:description" content="수학, 지금 어디쯤인지부터 봅니다. 우리 학교 시험 범위로 무료 진단 테스트를 쳐 보세요.">
+<meta property="og:image" content="https://haewoondae1.github.io/homepage/og.png">
+<meta property="og:url" content="https://haewoondae1.github.io/homepage/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fff'/%3E%3Cpath d='M14 38C8 22 30 10 44 12s16 18 8 28-30 14-38 4' fill='none' stroke='%23E3001B' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Pen+Script&display=swap">
+<style>
+:root{
+  --ink:#000000; --paper:#FFFFFF; --pen:#E3001B; --cell:#EDEDED; --sub:#333333;
+  --serif:"Nanum Myeongjo","Noto Serif KR","Noto Serif CJK KR","AppleMyungjo","Batang",serif;
+  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --hand:"Nanum Pen Script","Nanum Pen","Comic Sans MS",cursive;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+a{color:var(--ink)}
+a:hover{color:var(--pen)}
+a:focus-visible{outline:3px solid var(--pen);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:12px 24px 56px}
+
+/* 맨 위 */
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0 24px}
+.brand{font-size:18px;font-weight:700;padding:12px 0}
+.top nav{display:flex;flex-wrap:wrap;gap:0 22px;font-size:15px}
+.top nav a{display:inline-block;padding:12px 0}
+
+/* 시험지 머리 */
+.head{border-top:2px solid var(--ink);padding-top:28px}
+.head-grid{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px}
+.box{border:2px solid var(--ink);padding:8px 14px;font-size:16px;font-weight:700;white-space:nowrap}
+.title{text-align:center}
+.title p{margin:0;font-family:var(--serif);font-size:17px;font-weight:700}
+.title h1{margin:12px 0 0;font-family:var(--serif);font-weight:800;font-size:clamp(30px,5.4vw,46px);line-height:1.3;letter-spacing:-0.01em;word-break:keep-all}
+.info{display:flex;flex-wrap:wrap;margin:28px auto 0;width:fit-content;max-width:100%;border:1px solid var(--ink);font-size:16px}
+.info span,.info a{padding:10px 16px;border-right:1px solid var(--ink)}
+.info a{text-decoration:none;font-weight:600;border-right:0}
+.info .k{background:var(--cell);padding:10px 14px}
+.double{margin-top:28px;border-bottom:4px double var(--ink)}
+
+/* 본문 2단 */
+.cols{display:flex;flex-wrap:wrap;gap:0 32px;margin-top:40px}
+.col{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:60px;padding-bottom:40px}
+.rule{flex:0 0 1px;align-self:stretch;background:var(--ink)}
+.q{margin:0;font-family:var(--serif);font-size:21px;line-height:1.75;word-break:keep-all}
+.pt{font-size:16px}
+.choices{list-style:none;margin:18px 0 0;padding:0 0 0 10px;font-family:var(--serif);font-size:19px;line-height:2.15;word-break:keep-all}
+.choices.row{display:flex;flex-wrap:wrap;gap:4px 30px}
+.mark{position:relative;display:inline-block;line-height:1.2}
+.mark svg{position:absolute;left:-11px;top:-9px;width:calc(100% + 22px);height:calc(100% + 18px);overflow:visible;pointer-events:none}
+.mark path{fill:none;stroke:var(--pen);stroke-width:2.6;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.hand{font-family:var(--hand);color:var(--pen)}
+.ok{margin-left:14px;font-size:30px;white-space:nowrap;line-height:1}
+.note{margin-top:22px;padding:18px 20px;border:1px solid var(--ink);font-size:16px;line-height:1.8;word-break:keep-all}
+.note a{font-weight:600}
+.bogi{margin-top:18px;border:1px solid var(--ink);padding:14px 22px 16px;font-family:var(--serif);font-size:18px;line-height:2}
+.bogi .cap{text-align:center;font-size:15px}
+.desc{margin:16px 0 0;font-size:16px;line-height:1.8;word-break:keep-all}
+.btn{display:inline-flex;align-items:center;margin-top:20px;min-height:50px;padding:0 24px;font-size:17px;font-weight:600;text-decoration:none}
+.btn.solid{background:var(--ink);color:#FFFFFF}
+.btn.solid:hover{background:var(--pen);color:#FFFFFF}
+.btn.line{border:2px solid var(--ink);color:var(--ink)}
+.btn.line:hover{border-color:var(--pen);color:var(--pen)}
+.btn.pen{background:var(--pen);color:#FFFFFF;font-weight:700;min-height:54px;padding:0 28px;font-size:18px}
+.btn.pen:hover{background:var(--ink);color:#FFFFFF}
+.schools{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:18px;padding-left:10px;font-family:var(--serif);font-size:19px;line-height:2}
+.schools span{display:inline-flex;align-items:center;gap:6px}
+.schools svg path{fill:none;stroke:var(--pen);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.6;table-layout:fixed}
+th,td{border:1px solid var(--ink);padding:12px;text-align:center;word-break:keep-all}
+th{background:var(--cell);font-weight:600}
+th:nth-child(1),th:nth-child(2){width:24%}
+td.hand{text-align:left;padding:10px 14px;font-size:27px;line-height:1.25}
+.answer{margin-top:18px;border:1px solid var(--ink)}
+.answer .cap{padding:8px 14px;border-bottom:1px solid var(--ink);background:var(--cell);font-size:15px;font-weight:600}
+.answer p{margin:0;padding:18px 20px 22px;font-size:34px;line-height:1.45;word-break:keep-all}
+.foot{display:flex;justify-content:center;margin-top:40px;padding-top:18px;border-top:1px solid var(--ink)}
+.foot span{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;border:1px solid var(--ink);font-size:15px}
+
+@media (max-width:720px){
+  .wrap{padding:6px 18px 48px}
+  .head-grid{grid-template-columns:1fr 1fr;grid-template-areas:"l r" "t t";gap:16px}
+  .head-grid .l{grid-area:l;justify-self:start}
+  .head-grid .r{grid-area:r;justify-self:end}
+  .head-grid .title{grid-area:t}
+  .info{display:grid;grid-template-columns:auto 1fr;width:100%}
+  .info span,.info a{border-right:0;border-bottom:1px solid var(--ink)}
+  .info .k{border-right:1px solid var(--ink)}
+  .info > :nth-last-child(-n+2){border-bottom:0}
+  .q{font-size:19px}
+  .choices,.schools{font-size:18px}
+  .col{gap:48px}
+  th,td{padding:10px 8px;font-size:15px}
+  th:nth-child(1){width:19%}
+  th:nth-child(2){width:27%}
+  td.hand{font-size:23px;padding:8px 10px}
+  .answer p{font-size:29px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+  <div class="brand">해운대수학학원</div>
+  <nav aria-label="바로가기">
+    <a href="#q1">무료 진단 테스트</a>
+    <a href="#q2">우리 아이 기록</a>
+    <a href="#q4">과정별 수업</a>
+    <a href="#q5">상담</a>
+  </nav>
+</div>
+
+<header class="head">
+  <div class="head-grid">
+    <div class="box l">제1교시</div>
+    <div class="title">
+      <p>2026학년도 해운대수학학원 학부모님용 안내 평가</p>
+      <h1>수학, 지금 어디쯤인지부터 봅니다</h1>
+    </div>
+    <div class="box r">학부모형</div>
+  </div>
+  <div class="info">
+    <span class="k">대상</span><span>초2 ~ 고3</span>
+    <span class="k">지역</span><span>좌동, 중동, 우동</span>
+    <span class="k">상담</span><a href="tel:01048298327">010-4829-8327</a>
+  </div>
+  <div class="double" aria-hidden="true"></div>
+</header>
+
+<main class="cols">
+
+<section class="col">
+
+<div id="q1">
+  <p class="q"><b>1.</b> 우리 아이 수학 실력을 정확히 아는 방법으로 가장 알맞은 것은? <span class="pt">[5점]</span></p>
+  <ol class="choices">
+    <li>① 학교 시험 점수만 본다</li>
+    <li>② 문제집을 몇 권 풀었는지 센다</li>
+    <li><span class="mark">③<svg aria-hidden="true" viewBox="0 0 60 60" preserveAspectRatio="none"><path d="M42 8 C 22 1, 4 14, 5 31 C 6 50, 32 59, 49 47 C 60 37, 58 16, 38 8 C 31 6, 25 7, 20 10"/></svg></span> 우리 학교 시험 범위로 진단 테스트를 쳐 본다<span class="hand ok">정답!</span></li>
+    <li>④ 옆집 아이와 비교한다</li>
+    <li>⑤ 아이에게 물어본다</li>
+  </ol>
+  <div class="note"><b>해설</b> 학교마다 실제 시험 범위로 문제를 냅니다. 결과는 단원 묶음마다 탄탄, 양호, 보통, 흔들림, 보완 필요 다섯 단계로 보여 드립니다. 예비 중1 진단도 같은 곳에서 고를 수 있고, 지금 중3이라면 <a href="https://script.google.com/macros/s/AKfycbz51yhKsnJJ2XyDuC_hI_b5bnUXxFs_6pWLnt0su1NAH0_JYQ6tj5VlSL8CvfaWdGUZ/exec?test=h1">예비고1 모의시험</a>을 쳐 보세요.</div>
+  <a class="btn solid" href="https://script.google.com/macros/s/AKfycbz51yhKsnJJ2XyDuC_hI_b5bnUXxFs_6pWLnt0su1NAH0_JYQ6tj5VlSL8CvfaWdGUZ/exec">무료 진단 테스트 풀어 보기</a>
+</div>
+
+<div id="q2">
+  <p class="q"><b>2.</b> 해운대수학학원 학부모님이 받아 보시는 것만을 <span style="white-space:nowrap">&lt;보기&gt;에서</span> 있는 대로 고른 것은? <span class="pt">[4점]</span></p>
+  <div class="bogi">
+    <div class="cap">&lt;보 기&gt;</div>
+    <div>ㄱ. 월별 학습 진행표</div>
+    <div>ㄴ. 단원평가 시험지와 피드백 자료</div>
+    <div>ㄷ. 진단 테스트 성장 기록</div>
+    <div>ㄹ. 선생님 코멘트</div>
+  </div>
+  <ol class="choices row">
+    <li>① ㄱ</li>
+    <li>② ㄱ, ㄴ</li>
+    <li>③ ㄴ, ㄷ</li>
+    <li>④ ㄱ, ㄷ, ㄹ</li>
+    <li><span class="mark">⑤<svg aria-hidden="true" viewBox="0 0 60 60" preserveAspectRatio="none"><path d="M20 9 C 40 1, 58 14, 56 32 C 54 51, 28 59, 12 47 C 1 37, 4 16, 24 8 C 30 6, 36 7, 41 10"/></svg></span> ㄱ, ㄴ, ㄷ, ㄹ</li>
+  </ol>
+  <p class="desc">진단 테스트를 칠 때 정한 이름, 보호자 연락처, 비밀번호로 들어가시면 기록을 보실 수 있습니다.</p>
+  <a class="btn line" href="https://script.google.com/macros/s/AKfycbz51yhKsnJJ2XyDuC_hI_b5bnUXxFs_6pWLnt0su1NAH0_JYQ6tj5VlSL8CvfaWdGUZ/exec?student">우리 아이 기록 보기</a>
+</div>
+
+<div id="q3">
+  <p class="q"><b>3.</b> 해운대수학학원 진단 테스트와 시험 분석에서 다루는 학교를 모두 고르시오. <span class="pt">[3점]</span></p>
+  <div class="schools">
+    <span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M3 13 L9 19 L21 4"/></svg>신도중</span>
+    <span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M3 13 L9 19 L21 4"/></svg>동백중</span>
+    <span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M3 13 L9 19 L21 4"/></svg>양운중</span>
+    <span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M3 13 L9 19 L21 4"/></svg>해여중</span>
+    <span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M3 13 L9 19 L21 4"/></svg>신도고</span>
+  </div>
+  <p class="desc">부흥고, 해여고, 양운고, 해운대고는 차례로 추가합니다.</p>
+</div>
+
+</section>
+
+<div class="rule" aria-hidden="true"></div>
+
+<section class="col">
+
+<div id="q4">
+  <p class="q"><b>4.</b> 다음은 해운대수학학원 수업을 과정별로 정리한 표이다. 빈칸에 알맞은 말을 쓰시오. <span class="pt">[6점]</span></p>
+  <div style="margin-top:18px">
+    <table>
+      <thead><tr><th>과정</th><th>학년</th><th>수업</th></tr></thead>
+      <tbody>
+        <tr><td>초등</td><td>초2 ~ 초6</td><td class="hand">개별 진도, 단원 끝날 때마다 단원평가</td></tr>
+        <tr><td>중등</td><td>중1 ~ 중3</td><td class="hand">우리 학교 기출로 내신 대비</td></tr>
+        <tr><td>고등</td><td>고1 ~ 고3</td><td class="hand">학교별 내신, 예비고1 모의시험</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="q5">
+  <p class="q"><b>5.</b> [서술형] 해운대수학학원에 상담을 신청하는 방법을 서술하시오. <span class="pt">[10점]</span></p>
+  <div class="answer">
+    <div class="cap">답</div>
+    <p class="hand">010-4829-8327로 전화나 문자 주세요. 진단 테스트 결과를 보면서 상담하면 더 정확합니다.</p>
+  </div>
+  <a class="btn pen" href="tel:01048298327">전화 걸기 010-4829-8327</a>
+</div>
+
+</section>
+</main>
+
+<div class="foot"><span>1</span></div>
+
+</div>
+</body>
+</html>
