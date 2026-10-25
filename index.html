@@ -14,13 +14,12 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fff'/%3E%3Cpath d='M14 38C8 22 30 10 44 12s16 18 8 28-30 14-38 4' fill='none' stroke='%23E3001B' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Pen+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
 <style>
 :root{
   --ink:#000000; --paper:#FFFFFF; --pen:#E3001B; --cell:#EDEDED; --sub:#333333;
   --serif:"Nanum Myeongjo","Noto Serif KR","Noto Serif CJK KR","AppleMyungjo","Batang",serif;
   --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
-  --hand:"Nanum Pen Script","Nanum Pen","Comic Sans MS",cursive;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -60,13 +59,15 @@ a:focus-visible{outline:3px solid var(--pen);outline-offset:3px}
 .mark{position:relative;display:inline-block;line-height:1.2}
 .mark svg{position:absolute;left:-11px;top:-9px;width:calc(100% + 22px);height:calc(100% + 18px);overflow:visible;pointer-events:none}
 .mark path{fill:none;stroke:var(--pen);stroke-width:2.6;stroke-linecap:round;vector-effect:non-scaling-stroke}
-.hand{font-family:var(--hand);color:var(--pen)}
-.ok{margin-left:14px;font-size:30px;white-space:nowrap;line-height:1}
+.hand{font-family:var(--serif);font-weight:700;color:var(--pen)}
+.ok{margin-left:14px;font-size:19px;white-space:nowrap}
 .note{margin-top:22px;padding:18px 20px;border:1px solid var(--ink);font-size:16px;line-height:1.8;word-break:keep-all}
 .note a{font-weight:600}
 .bogi{margin-top:18px;border:1px solid var(--ink);padding:14px 22px 16px;font-family:var(--serif);font-size:18px;line-height:2}
 .bogi .cap{text-align:center;font-size:15px}
 .desc{margin:16px 0 0;font-size:16px;line-height:1.8;word-break:keep-all}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btns .btn{margin-top:0}
 .btn{display:inline-flex;align-items:center;margin-top:20px;min-height:50px;padding:0 24px;font-size:17px;font-weight:600;text-decoration:none}
 .btn.solid{background:var(--ink);color:#FFFFFF}
 .btn.solid:hover{background:var(--pen);color:#FFFFFF}
@@ -81,10 +82,10 @@ table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.6;table-l
 th,td{border:1px solid var(--ink);padding:12px;text-align:center;word-break:keep-all}
 th{background:var(--cell);font-weight:600}
 th:nth-child(1),th:nth-child(2){width:24%}
-td.hand{text-align:left;padding:10px 14px;font-size:27px;line-height:1.25}
+td.hand{text-align:left;padding:12px 14px;font-size:17px;line-height:1.6}
 .answer{margin-top:18px;border:1px solid var(--ink)}
 .answer .cap{padding:8px 14px;border-bottom:1px solid var(--ink);background:var(--cell);font-size:15px;font-weight:600}
-.answer p{margin:0;padding:18px 20px 22px;font-size:34px;line-height:1.45;word-break:keep-all}
+.answer p{margin:0;padding:18px 20px 22px;font-size:21px;line-height:1.8;word-break:keep-all}
 .foot{display:flex;justify-content:center;margin-top:40px;padding-top:18px;border-top:1px solid var(--ink)}
 .foot span{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;border:1px solid var(--ink);font-size:15px}
 
@@ -104,8 +105,8 @@ td.hand{text-align:left;padding:10px 14px;font-size:27px;line-height:1.25}
   th,td{padding:10px 8px;font-size:15px}
   th:nth-child(1){width:19%}
   th:nth-child(2){width:27%}
-  td.hand{font-size:23px;padding:8px 10px}
-  .answer p{font-size:29px}
+  td.hand{font-size:15px;padding:10px}
+  .answer p{font-size:19px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -173,8 +174,11 @@ td.hand{text-align:left;padding:10px 14px;font-size:27px;line-height:1.25}
     <li>④ ㄱ, ㄷ, ㄹ</li>
     <li><span class="mark">⑤<svg aria-hidden="true" viewBox="0 0 60 60" preserveAspectRatio="none"><path d="M20 9 C 40 1, 58 14, 56 32 C 54 51, 28 59, 12 47 C 1 37, 4 16, 24 8 C 30 6, 36 7, 41 10"/></svg></span> ㄱ, ㄴ, ㄷ, ㄹ</li>
   </ol>
-  <p class="desc">진단 테스트를 칠 때 정한 이름, 보호자 연락처, 비밀번호로 들어가시면 기록을 보실 수 있습니다.</p>
-  <a class="btn line" href="https://script.google.com/macros/s/AKfycbz51yhKsnJJ2XyDuC_hI_b5bnUXxFs_6pWLnt0su1NAH0_JYQ6tj5VlSL8CvfaWdGUZ/exec?student">우리 아이 기록 보기</a>
+  <p class="desc">주차별 학습 진행표는 학원에 알려 주신 학부모 연락처로, 진단 테스트 기록은 시험 칠 때 정한 이름과 연락처로 들어가십니다. 둘 다 처음 정한 비밀번호가 필요합니다.</p>
+  <div class="btns">
+    <a class="btn line" href="https://script.google.com/macros/s/AKfycbwtFJjAMDSumG1hWKq0wZO5lKUf30io1FvwrpMJWNh1sQ_DTPdoXgrrg5cg3BcrZEhK/exec?find">학습 진행표 보기</a>
+    <a class="btn line" href="https://script.google.com/macros/s/AKfycbz51yhKsnJJ2XyDuC_hI_b5bnUXxFs_6pWLnt0su1NAH0_JYQ6tj5VlSL8CvfaWdGUZ/exec?student">진단 테스트 기록 보기</a>
+  </div>
 </div>
 
 <div id="q3">
